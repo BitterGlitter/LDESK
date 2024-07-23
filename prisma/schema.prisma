@@ -1,6 +1,6 @@
 datasource db {
-  provider = "postgresql"
-  url = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
   directUrl = env("DIRECT_URL")
 }
 
@@ -9,12 +9,14 @@ generator client {
 }
 
 model Teacher {
-  id        Int      @id @default(autoincrement())
-  name      String
-  subject   String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  schedule  Schedule?
+  id                    Int          @id @default(autoincrement())
+  name                  String
+  subject               String
+  createdAt             DateTime     @default(now())
+  updatedAt             DateTime     @updatedAt
+  schedules             Schedule[]
+  absentAdjustments     Adjustment[] @relation("AbsentAdjustments")
+  substituteAdjustments Adjustment[] @relation("SubstituteAdjustments")
 }
 
 model Schedule {
@@ -28,3 +30,14 @@ model Schedule {
   updatedAt DateTime @updatedAt
 }
 
+model Adjustment {
+  id                  Int      @id @default(autoincrement())
+  day                 Int
+  lecture             String
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+  absentTeacher       Teacher  @relation("AbsentAdjustments", fields: [absentTeacherId], references: [id])
+  absentTeacherId     Int
+  substituteTeacher   Teacher  @relation("SubstituteAdjustments", fields: [substituteTeacherId], references: [id])
+  substituteTeacherId Int
+}
