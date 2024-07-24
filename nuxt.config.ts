@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     ],
   fontawesome: {
       icons: {
-        solid: ['magnifying-glass'],
+        solid: ['magnifying-glass', 'users','calendar-plus','calendar-days'],
       }
     }
   })
