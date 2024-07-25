@@ -20,7 +20,6 @@
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@prisma/client": "^5.17.0",
     "@vesp/nuxt-fontawesome": "^1.0.4",
-    "daisyui": "^4.12.10",
     "prisma": "^5.17.0"
   }
 }
