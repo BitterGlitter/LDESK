@@ -3,12 +3,12 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   modules: [
-     "@nuxtjs/tailwindcss",
+    "@nuxtjs/tailwindcss",
     '@vesp/nuxt-fontawesome',
-    ],
+  ],
   fontawesome: {
-      icons: {
-        solid: ['magnifying-glass', 'user', 'users','calendar-plus','calendar-days'],
-      }
+    icons: {
+      solid: ['magnifying-glass', 'user', 'edit', 'trash', 'users', 'calendar-plus', 'calendar-days'],
     }
-  })
+  }
+})
