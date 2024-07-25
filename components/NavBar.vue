@@ -1,24 +1,26 @@
 <template>
-<header
-    class="fixed inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md border border-gray-100 bg-white/80 py-3 shadow backdrop-blur-lg md:top-6 md:rounded-3xl lg:max-w-screen-lg">
-    <div class="px-4">
-        <div class="flex items-center justify-between">
-            <div class="flex shrink-0">
-                <a aria-current="page" class="flex items-center" href="/">
-                    <p class="text-2xl font-bold font-sans ">LDESK</p>
-                </a>
-            </div>
-            <div class="hidden md:flex md:items-center md:justify-center md:gap-5">
-            </div>
-            <div class="flex items-center justify-end gap-3">
-                <NuxtLink class="hidden items-center justify-center rounded-xl bg-white px-3 py-2 text-sm font-semibold text-gray-900  transition-all duration-150 hover:bg-gray-50 sm:inline-flex"
-                    href="/teachers">Teachers</NuxtLink>
-                    <NuxtLink class="hidden items-center justify-center rounded-xl bg-white px-3 py-2 text-sm font-semibold text-gray-900  transition-all duration-150 hover:bg-gray-50 sm:inline-flex"
-                    href="/adjustments">Adjustments</NuxtLink>
-                    <NuxtLink class="hidden items-center justify-center rounded-xl bg-white px-3 py-2 text-sm font-semibold text-gray-900  transition-all duration-150 hover:bg-gray-50 sm:inline-flex"
-                    href="/schedule">Schedule</NuxtLink>
-            </div>
-        </div>
+<header class="lg:px-6 px-4 bg-white flex flex-wrap items-center py-4 shadow-md">
+    <div class="flex-1 flex justify-between items-center">
+        <NuxtLink to="/" class="text-xl">LDESK</NuxtLink>
+    </div>
+
+    <label for="menu-toggle" class="pointer-cursor md:hidden block">
+      <svg class="fill-current text-gray-900"
+        xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+        <title>Menu</title>
+        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+      </svg>
+    </label>
+    <input class="hidden" type="checkbox" id="menu-toggle" />
+
+    <div class="hidden md:flex md:items-center md:w-auto w-full" id="menu">
+        <nav>
+            <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
+                <li><NuxtLink class="md:p-4 py-3 px-0 block" to="/teachers">Teachers</NuxtLink></li>
+                <li><NuxtLink class="md:p-4 py-3 px-0 block" to="/schedule">Schedule</NuxtLink></li>
+                <li><NuxtLink class="md:p-4 py-3 px-0 block" to="/adjustments">Adjustments</NuxtLink></li>
+            </ul>
+        </nav>
     </div>
 </header>
 </template>
