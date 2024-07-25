@@ -2,7 +2,6 @@
     <div class="container mx-auto px-4 py-8">
         <div class="bg-white shadow-md rounded-lg overflow-hidden">
             <div class="p-6">
-                <!-- Adjustment Details -->
                 <div class="mb-4">
                     <h2 class="text-2xl font-bold mb-2">Adjustment Details</h2>
                     <div class="grid grid-cols-2 gap-4">
@@ -64,7 +63,7 @@ if (!adjustment.value?.id) {
 }
 
 
-const handleDelete = async () => {
+async function handleDelete() {
     const { data: deletedAdjustment } = await useFetch(`/api/adjustments`, {
         method: 'delete',
         body: {
