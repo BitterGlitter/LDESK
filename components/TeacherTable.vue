@@ -1,64 +1,49 @@
 <template>
-  <div>
-    <div class="overflow-x-auto">
-      <table class="table">
-        <!-- head -->
-        <thead>
-          <tr>
-            <th>
-              <label>
-                <input type="checkbox" class="checkbox" />
-              </label>
-            </th>
-            <th>Name</th>
-            <th>Job</th>
-            <th>Favorite Color</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- row 1 -->
-          <tr v-for="teacher in teachers">
-            <th>
-              <label>
-                <input type="checkbox" class="checkbox" />
-              </label>
-            </th>
-            <td>
-              <div class="flex items-center gap-3">
-                <div class="avatar">
-                  <div class="mask mask-squircle h-12 w-12">
-                    <img src="https://img.daisyui.com/images/profile/demo/2@94.webp"
-                      alt="Avatar Tailwind CSS Component" />
-                  </div>
-                </div>
-                <div>
-                  <div class="font-bold">{{ teacher.name }}</div>
-                </div>
+  <table class="min-w-full divide-y divide-gray-200 overflow-x-auto">
+    <thead class="bg-gray-50">
+      <tr>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+          ID
+        </th>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+          Name
+        </th>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+          Subject
+        </th>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+          Actions
+        </th>
+      </tr>
+    </thead>
+    <tbody class="bg-white divide-y divide-gray-200">
+      <tr v-for="teacher in teachers">
+        <td class="px-6 py-4 whitespace-nowrap">
+          <div class="flex items-center">
+            <div class="flex-shrink-0 h-10 w-10">
+              <font-awesome class="h-10 w-10 rounded-full" icon="user" />
+            </div>
+            <div class="ml-4">
+              <div class="text-sm font-medium text-gray-900">
+                {{ teacher.id }}
               </div>
-            </td>
-            <td>
-              <span class="badge badge-ghost badge-sm">{{ teacher.subject }}</span>
-            </td>
-            <td>Purple</td>
-            <th>
-              <NuxtLink :to="`/teachers/${teacher.id}`"><button class="btn btn-ghost btn-xs">Edit</button></NuxtLink>
-            </th>
-          </tr>
-        </tbody>
-        <!-- foot -->
-        <tfoot>
-          <tr>
-            <th></th>
-            <th>Name</th>
-            <th>Job</th>
-            <th>Favorite Color</th>
-            <th></th>
-          </tr>
-        </tfoot>
-      </table>
-    </div>
-  </div>
+            </div>
+          </div>
+        </td>
+        <td class="px-6 py-4 whitespace-nowrap">
+          <div class="text-sm text-gray-900">{{ teacher.name }}</div>
+        </td>
+        <td class="px-6 py-4 whitespace-nowrap">
+          <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+            {{ teacher.subject }}
+          </span>
+        </td>
+        <td class="px-6 py-4 whitespace-nowrap  text-sm font-medium">
+          <NuxtLink :href="`/teachers/${teacher.id}`" class="text-indigo-600 hover:text-indigo-900">Edit</NuxtLink>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </template>
 
 <script lang="ts" setup>
