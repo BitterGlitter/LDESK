@@ -23,8 +23,8 @@
 <script lang="ts" setup>
 const teacherName = ref('');
 const teacherSubject = ref('');
-function addTeacher() {
-  const newTeacher = useFetch(`/api/teachers`,
+async function addTeacher() {
+  const newTeacher = await  useFetch(`/api/teachers`,
     {
       method: 'post',
       body: {
@@ -33,7 +33,10 @@ function addTeacher() {
       }
     }
   )
+window.location.href = '/teachers'
+
 }
+
 </script>
 
 <style></style>
