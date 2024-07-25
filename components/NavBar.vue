@@ -5,7 +5,7 @@
   </div>
   <div class="flex-none">
     <ul class="menu menu-horizontal px-1">
-      <li><a>Link</a></li>
+      <li><NuxtLink href="about">about</NuxtLink></li>
       <li>
         <details>
           <summary>Parent</summary>
