@@ -1,6 +1,5 @@
 <template>
   <div>
-    <NavBar />
     <div class="p-8 pt-10">
       <TeacherSearch />
       <div class="p-2 md:p8">
