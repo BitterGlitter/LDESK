@@ -32,7 +32,7 @@
       </div>
       <button @click="addSchedule()"
         class="cursor-pointer py-2 px-4 block mt-6 bg-indigo-500 text-white font-bold w-full text-center rounded">Add
-        Schedule</button>
+        to Schedule</button>
    <!-- </form> -->
     </div>
   </div>

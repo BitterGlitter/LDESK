@@ -17,7 +17,7 @@
         <nav>
             <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
                 <li><NuxtLink class="md:p-4 py-3 px-0 block" to="/teachers">Teachers</NuxtLink></li>
-                <li><NuxtLink class="md:p-4 py-3 px-0 block" to="/schedule">Schedule</NuxtLink></li>
+                <li><NuxtLink class="md:p-4 py-3 px-0 block" to="/schedules">Schedule</NuxtLink></li>
                 <li><NuxtLink class="md:p-4 py-3 px-0 block" to="/adjustments">Adjustments</NuxtLink></li>
             </ul>
         </nav>
