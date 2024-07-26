@@ -22,7 +22,7 @@ model Teacher {
 model Schedule {
   id        Int      @id @default(autoincrement())
   teacher   Teacher  @relation(fields: [teacherId], references: [id])
-  teacherId Int      @unique
+  teacherId Int      
   day       Int
   lecture   String
   session   String
