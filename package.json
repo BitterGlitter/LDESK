@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "^6.12.1",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.8.2",
     "nuxt": "^3.12.4",
     "vue": "latest"
   },
