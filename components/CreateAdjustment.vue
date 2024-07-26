@@ -79,6 +79,7 @@ const handleSubmit = async () => {
   })
 
   alert(`Adjustment ${adjustment.value.id} created`)
+  await navigateTo('/adjustments');
 };
 </script>
   

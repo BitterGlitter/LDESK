@@ -49,7 +49,7 @@ const {data: teachers} = await  useFetch(`/api/teachers/search`);
 
 
 async function addSchedule() {
-  const newTeacher = await  useFetch(`/api/schedules`,
+  const { data: newSchedule } = await useFetch(`/api/schedules`,
     {
       method: 'post',
       body: {
@@ -60,8 +60,10 @@ async function addSchedule() {
       }
     }
   )
-window.location.href = '/api/schedules'
-
+  if (newSchedule.value?.id) {
+    alert(`Schedule ${newSchedule.value.id} added`)
+  }
+  await navigateTo('/schedules')
 }
 
 </script>

@@ -12,7 +12,7 @@ export async function getSchedules() {
 }
 
 export async function getScheduleByTeacher(teacherId: number) {
-    const schedule = await prisma.schedule.findFirst({
+    const schedule = await prisma.schedule.findMany({
         where: {
             teacherId
         },

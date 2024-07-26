@@ -26,7 +26,7 @@
         <tbody>
           <tr v-for="adjustment in adjustments" :key="adjustment.id" class="hover:bg-gray-100">
             <td class="px-6 py-4 whitespace-nowrap">{{ adjustment.id }}</td>
-            <td class="px-6 py-4 whitespace-nowrap">{{ getDayName(adjustment.day) }}</td>
+            <td class="px-6 py-4 whitespace-nowrap">{{ getDayName(adjustment.day - 1) }}</td>
             <td class="px-6 py-4 whitespace-nowrap">{{ adjustment.lecture }}</td>
             <td class="px-6 py-4 whitespace-nowrap">{{ adjustment.session }}</td>
             <td class="px-6 py-4 whitespace-nowrap">
