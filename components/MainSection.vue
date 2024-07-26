@@ -8,7 +8,7 @@
       <div class="p-4 md:w-1/3 sm:w-1/3 w-full" v-for="card in cards">
         <div class="border-2 border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
           <font-awesome :icon='`${card.icon }`' class="text-blue text-3xl"  />
-          <NuxtLink :to="`${card.href}`"><h2 class="title-font font-medium text-3xl text-gray-900"> {{ card.title }}</h2></NuxtLink>
+          <NuxtLink :to="`${card.href}`"><div><h2 class="title-font font-medium text-3xl text-gray-900"> {{ card.title }}</h2></div></NuxtLink>
           <p class="leading-relaxed"></p>
         </div>
       </div>
@@ -31,7 +31,7 @@ const cards = [{
 },
 {
   title: "Schedule",
-  href: 'schedule',
+  href: 'schedules',
   icon: 'calendar-days'
 }]
 
